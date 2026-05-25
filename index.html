@@ -111,22 +111,22 @@
 
         .smoke {
             position: absolute;
-            bottom: 20px;
-            right: -15px;
+            bottom: 10px;
+right: -15px;
             width: 15px;
             height: 15px;
             background: rgba(200, 200, 200, 0.8);
             border-radius: 50%;
             opacity: 0;
-            animation: puff 2s infinite;
+            animation: puff 1s infinite;
         }
         
         .is-moving .smoke {
-            opacity: 2;
+            opacity: 1;
         }
 
         @keyframes puff {
-            0% { transform: scale(0.7) translate(0, 0); opacity: 1.0; }
+            0% { transform: scale(0.5) translate(0, 0); opacity: 0.8; }
             100% { transform: scale(2) translate (20px, 10px); opacity: 0; }
         }
 
@@ -245,7 +245,7 @@
 
             <div class="flex-1 min-h-0 flex flex-col items-center justify-center bg-gray-800 border border-gray-700 rounded-3xl p-4 md:p-8 shadow-2xl text-center relative">
                 
-                <div id="target-text" class="flex-1 flex items-center justify-center text-6xl sm:text-7xl md:text-9xl font-bold text-white mb-4 min-h-[60px] drop-shadow-md px-4 leading-tight text-center break-words" style="font-size: clamp(1rem, 5vw, 4rem);">
+                <div id="target-text" class="flex-1 flex items-center justify-center text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-4 min-h-[60px] drop-shadow-md px-4 leading-tight text-center break-words" style="font-size: clamp(1rem, 5vw, 4rem);">
                     Apple
                 </div>
 
@@ -338,7 +338,9 @@
                     { id: 't1', title: 'A-E', l1: ['apple', 'boy', 'ball', 'cat', 'car', 'dog', 'dinosaur', 'egg', 'elephant'], l2: ['It is an apple.', 'I like dogs.', 'I eat eggs.', 'The elephant is big.', 'The dinosaur is big.', 'The ant is small.', 'I am a boy.'] },
                     { id: 't1_2', title: 'F-J', l1: ['fan', 'fish', 'go', 'goat', 'hat', 'horse', 'in', 'ink', 'juice', 'jump'], l2: ['I can jump.', 'I can go.', "I like juice.", 'I like fish.', 'The horse can jump.', 'The horse has a hat.', 'The goat likes juice.'] }
                 ],
-                2: [{ id: 't2', title: 'Seafood in Cigu', l1: ['land', 'sea', 'water', 'seafood', 'clams', 'oysters', 'shrimp', 'milkfish'], l2: ['The clams live in the water.', 'I like milkfish.', 'I don’t eat seafood.', 'I want shrimp.', 'They are clams.', 'It is a milkfish.', 'I don’t like oysters.'] }],
+                2: [{ id: 't2', title: 'Seafood in Cigu', l1: ['land', 'sea', 'water', 'seafood', 'clams', 'oysters', 'shrimp', 'milkfish'], l2: ['The clams is in the water.', 'I like milkfish.', 'I don’t eat seafood.', 'I want shrimp.', 'They are clams.', 'It is a milkfish.', 'I don’t like oysters.'] },
+                    { id: 't2_2', title: 'N-R', l1: ['nose', 'no', 'nest', 'nine', 'ox', 'on', 'ostrich', 'octopus', 'pumpkin', 'pancake', 'pizza', 'popcorn', 'queen', 'question', 'quail', 'quiet', 'rabbit', 'rose', 'rainbow', 'rock'], l2: ['The quail is on the ox', 'I eat pizza and popcorn.', 'Do you like pancakes?', 'The teacher says no.', 'The queen is beautiful.', 'I have a question.'] }
+                ],
                 3: [{ id: 't3', title: 'Jobs', l1: ['teacher', 'doctor', 'nurse', 'student', 'farmer', 'cook'], l2: ['He is a teacher.', 'We are students.', 'Is he a farmer?', 'Is she a nurse?', 'My father is a cook.', 'My mother is a teacher.', 'My brother is a doctor.'] }],
                 4: [{ id: 't4', title: 'Animals', l1: ['tigers', 'zebras', 'bears', 'monkeys', 'lions', 'giraffes', 'elephants', 'rhinos', 'horses'], l2: ['I like tigers.', 'I don’t like monkeys.', 'Do you like giraffes?', 'I like bears.', 'The elephants are big.', 'It is a horse.', 'They are lions.'] }],
                 5: [{ id: 't5', title: 'WW6-U4', l1: ['water bottle', 'key', 'umbrella', 'jacket', 'watch', 'smartphone', 'glasses'], l2: ['Whose jacket is it?', 'It’s my jacket.', 'Whose smartphone is it?', 'It’s her smartphone.', 'Whose umbrella is it?', 'It’s his umbrella.', 'Whose watch is it?', 'It’s Kevin’s watch.', 'Whose key is it?', 'It’s Amy’s key.', 'Whose glasses are they?', 'They’re my glasses.'] }],
