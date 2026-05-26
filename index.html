@@ -112,9 +112,9 @@
         .smoke {
             position: absolute;
             bottom: 10px;
-right: -15px;
-            width: 15px;
-            height: 15px;
+            right: -20px;
+            width: 20px;
+            height: 20px;
             background: rgba(200, 200, 200, 0.8);
             border-radius: 50%;
             opacity: 0;
@@ -127,7 +127,7 @@ right: -15px;
 
         @keyframes puff {
             0% { transform: scale(0.5) translate(0, 0); opacity: 0.8; }
-            100% { transform: scale(2) translate (20px, 10px); opacity: 0; }
+            100% { transform: scale(2) translate (-20px, 10px); opacity: 0; }
         }
 
         .mic-pulse {
@@ -245,7 +245,7 @@ right: -15px;
 
             <div class="flex-1 min-h-0 flex flex-col items-center justify-center bg-gray-800 border border-gray-700 rounded-3xl p-4 md:p-8 shadow-2xl text-center relative">
                 
-                <div id="target-text" class="flex-1 flex items-center justify-center text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-4 min-h-[60px] drop-shadow-md px-4 leading-tight text-center break-words" style="font-size: clamp(1rem, 5vw, 4rem);">
+                <div id="target-text" class="flex-1 flex items-center justify-center text-5xl sm:text-6xl md:text-8xl font-bold text-white mb-4 min-h-[60px] drop-shadow-md px-4 leading-tight text-center break-words" style="font-size: clamp(2rem, 8vw, 6rem);">
                     Apple
                 </div>
 
@@ -270,7 +270,7 @@ right: -15px;
                     </button>
                 </div>
                 
-                <div id="recognition-status" class="flex-none mt-4 text-yellow-400 h-6 text-sm md:text-lg font-bold">Tap mic to speak</div>
+                <div id="recognition-status" class="flex-none mt-4 text-yellow-400 h-8 text-xl md:text-3xl font-bold">Tap mic to speak</div>
             </div>
         </div>
 
@@ -281,7 +281,7 @@ right: -15px;
             
             <div class="bg-gray-800 border-2 border-gray-600 w-full max-w-sm mx-auto rounded-3xl p-6 mb-8 shadow-2xl flex-none">
                 <div class="text-base md:text-xl text-gray-400 uppercase font-bold tracking-widest mb-2">Final Score</div>
-                <div id="result-score" class="text-6xl md:text-8xl font-bold text-green-400 drop-shadow-[0_0_10px_rgba(74,222,128,0.5)]">100</div>
+                <div id="result-score" class="text-6xl md:text-8xl font-bold text-green-400 drop-shadow-[0_0_10px_rgba(74,222,128,0.5)]">0</div>
             </div>
 
             <div id="result-actions" class="flex flex-col sm:flex-row gap-4 flex-none">
@@ -338,9 +338,7 @@ right: -15px;
                     { id: 't1', title: 'A-E', l1: ['apple', 'boy', 'ball', 'cat', 'car', 'dog', 'dinosaur', 'egg', 'elephant'], l2: ['It is an apple.', 'I like dogs.', 'I eat eggs.', 'The elephant is big.', 'The dinosaur is big.', 'The ant is small.', 'I am a boy.'] },
                     { id: 't1_2', title: 'F-J', l1: ['fan', 'fish', 'go', 'goat', 'hat', 'horse', 'in', 'ink', 'juice', 'jump'], l2: ['I can jump.', 'I can go.', "I like juice.", 'I like fish.', 'The horse can jump.', 'The horse has a hat.', 'The goat likes juice.'] }
                 ],
-                2: [{ id: 't2', title: 'Seafood in Cigu', l1: ['land', 'sea', 'water', 'seafood', 'clams', 'oysters', 'shrimp', 'milkfish'], l2: ['The clams is in the water.', 'I like milkfish.', 'I don’t eat seafood.', 'I want shrimp.', 'They are clams.', 'It is a milkfish.', 'I don’t like oysters.'] },
-                    { id: 't2_2', title: 'N-R', l1: ['nose', 'no', 'nest', 'nine', 'ox', 'on', 'ostrich', 'octopus', 'pumpkin', 'pancake', 'pizza', 'popcorn', 'queen', 'question', 'quail', 'quiet', 'rabbit', 'rose', 'rainbow', 'rock'], l2: ['The quail is on the ox', 'I eat pizza and popcorn.', 'Do you like pancakes?', 'The teacher says no.', 'The queen is beautiful.', 'I have a question.'] }
-                ],
+                2: [{ id: 't2', title: 'Seafood in Cigu', l1: ['land', 'sea', 'water', 'seafood', 'clams', 'oysters', 'shrimp', 'milkfish'], l2: ['The clams live in the water.', 'I like milkfish.', 'I don’t eat seafood.', 'I want shrimp.', 'They are clams.', 'It is a milkfish.', 'I don’t like oysters.'] }],
                 3: [{ id: 't3', title: 'Jobs', l1: ['teacher', 'doctor', 'nurse', 'student', 'farmer', 'cook'], l2: ['He is a teacher.', 'We are students.', 'Is he a farmer?', 'Is she a nurse?', 'My father is a cook.', 'My mother is a teacher.', 'My brother is a doctor.'] }],
                 4: [{ id: 't4', title: 'Animals', l1: ['tigers', 'zebras', 'bears', 'monkeys', 'lions', 'giraffes', 'elephants', 'rhinos', 'horses'], l2: ['I like tigers.', 'I don’t like monkeys.', 'Do you like giraffes?', 'I like bears.', 'The elephants are big.', 'It is a horse.', 'They are lions.'] }],
                 5: [{ id: 't5', title: 'WW6-U4', l1: ['water bottle', 'key', 'umbrella', 'jacket', 'watch', 'smartphone', 'glasses'], l2: ['Whose jacket is it?', 'It’s my jacket.', 'Whose smartphone is it?', 'It’s her smartphone.', 'Whose umbrella is it?', 'It’s his umbrella.', 'Whose watch is it?', 'It’s Kevin’s watch.', 'Whose key is it?', 'It’s Amy’s key.', 'Whose glasses are they?', 'They’re my glasses.'] }],
@@ -383,7 +381,11 @@ right: -15px;
 
         class App {
             constructor() {
-                this.state = { grade: null, themeClass: 'btn-blue', student: null, topic: null, level: 1, currentPool: [], currentItem: '', progress: 0, totalAttempts: 0, totalScore: 0, l1FinalScore: null, isListening: false };
+                this.state = { 
+                    grade: null, themeClass: 'btn-blue', student: null, topic: null, 
+                    level: 1, currentPool: [], currentItem: '', progress: 0, 
+                    totalScore: 0, l1Score: 0, l2Score: 0, isListening: false 
+                };
                 this.audio = new AudioEngine();
                 this.initSpeechRecognition();
             }
@@ -400,9 +402,16 @@ right: -15px;
                 if (SpeechRecognition) {
                     this.recognition = new SpeechRecognition();
                     this.recognition.lang = 'en-US';
-                    this.recognition.interimResults = false;
+                    this.recognition.continuous = false; 
+                    this.recognition.interimResults = true; 
                     this.recognition.onstart = () => { this.state.isListening = true; this.updateMicUI(); this.audio.playMicStart(); };
-                    this.recognition.onresult = (event) => { const transcript = event.results[0][0].transcript; this.handleSpeechResult(transcript); };
+                    // Only process final results
+                    this.recognition.onresult = (event) => { 
+                        const result = event.results[event.results.length - 1];
+                        if (result.isFinal) {
+                            this.handleSpeechResult(result[0].transcript); 
+                        }
+                    };
                     this.recognition.onend = () => { this.state.isListening = false; this.updateMicUI(); };
                 }
             }
@@ -447,7 +456,7 @@ right: -15px;
                 const students = DATA.students[this.state.grade] || [];
                 students.forEach(s => {
                     const btn = document.createElement('button');
-                    btn.className = `btn-game ${this.state.themeClass} py-2 px-2 rounded-2xl font-extrabold h-full w-full flex items-center justify-center text-center text-base md:text-2xl whitespace-nowrap overflow-hidden min-w-0`;
+                    btn.className = `btn-game ${this.state.themeClass} py-2 px-2 rounded-2xl font-extrabold h-full w-full flex items-center justify-center text-center text-lg md:text-3xl whitespace-nowrap overflow-hidden min-w-0`;
                     btn.innerHTML = `<span class="truncate w-full">${s.id}. ${s.name}</span>`;
                     btn.onclick = () => { this.state.student = s; this.navigate('topic'); };
                     container.appendChild(btn);
@@ -462,7 +471,7 @@ right: -15px;
                     const btn = document.createElement('button');
                     btn.className = `btn-game ${this.state.themeClass} p-4 md:py-8 rounded-3xl flex items-center justify-center h-full w-full text-2xl md:text-5xl font-extrabold leading-tight text-center`;
                     btn.innerHTML = `<span class="text-center font-extrabold">${t.title}</span>`;
-                    btn.onclick = () => { this.state.topic = t; this.startGame(1); };
+                    btn.onclick = () => { this.state.topic = t; this.state.l1Score = 0; this.state.l2Score = 0; this.startGame(1); };
                     container.appendChild(btn);
                 });
             }
@@ -470,7 +479,6 @@ right: -15px;
             startGame(level) {
                 this.state.level = level;
                 this.state.progress = 0;
-                this.state.totalAttempts = 0;
                 this.state.totalScore = 0;
                 const rawPool = this.state.level === 1 ? this.state.topic.l1 : this.state.topic.l2;
                 this.state.currentPool = this.shuffleArray([...rawPool]);
@@ -499,35 +507,33 @@ right: -15px;
             }
 
             handleSpeechResult(transcript) {
-                const score = this.calculateScore(transcript, this.state.currentItem);
-                this.state.totalAttempts++;
-                this.state.totalScore += score;
+                const ratio = this.calculateAccuracy(transcript, this.state.currentItem);
+                const points = Math.round(ratio * 20); // Scale to 20 pts max
                 
-                let feedback = "";
-                if(score >= 90) feedback = "Perfect!";
-                else if(score >= 75) feedback = "Great!";
-                else if(score >= 60) feedback = "Good!";
-                else feedback = "Try again!";
-                
-                document.getElementById('recognition-status').innerText = feedback;
-                
-                if (score >= 60) {
+                if (ratio >= 0.5) { // 50% Threshold to count as progress and move
+                    this.state.totalScore += points;
                     this.state.progress++;
                     this.updateCarPosition();
                     this.audio.playSuccess();
+                    document.getElementById('recognition-status').innerText = `Great! (${points} pts)`;
                     document.getElementById('track').classList.add('is-moving');
                     setTimeout(() => { document.getElementById('track').classList.remove('is-moving'); this.nextWord(); }, 1500);
                 } else {
+                    document.getElementById('recognition-status').innerText = "Try again!";
                     this.audio.playTryAgain();
                 }
             }
 
-            calculateScore(spoken, target) {
+            calculateAccuracy(spoken, target) {
                 const clean = str => str.toLowerCase().replace(/[^\w\s]/gi, '').trim();
                 const tWords = clean(target).split(/\s+/);
                 const sWords = clean(spoken).split(/\s+/);
-                let matches = tWords.filter(tw => sWords.some(sw => sw.includes(tw) || tw.includes(sw))).length;
-                return Math.round((matches / tWords.length) * 100);
+                
+                let matches = 0;
+                tWords.forEach(tw => {
+                    if (sWords.some(sw => sw.includes(tw) || tw.includes(sw))) matches++;
+                });
+                return matches / tWords.length;
             }
 
             updateCarPosition() {
@@ -539,23 +545,45 @@ right: -15px;
             endLevel() {
                 this.navigate('results');
                 const isLevel1 = this.state.level === 1;
-                const finalScore = Math.round((this.state.totalScore / Math.max(1, this.state.totalAttempts)));
+                const finalScore = this.state.totalScore;
                 
-                if (isLevel1) this.state.l1FinalScore = finalScore;
+                if (isLevel1) {
+                    this.state.l1Score = finalScore;
+                } else {
+                    this.state.l2Score = finalScore;
+                }
                 
-                document.getElementById('result-score').innerText = finalScore;
+                // Show "Try Again" message for low scores based on average
+                const title = document.getElementById('result-title');
+                const desc = document.getElementById('result-desc');
+                
+                let displayScore = finalScore;
+                if (!isLevel1) {
+                    displayScore = Math.round((this.state.l1Score + this.state.l2Score) / 2);
+                }
+                
+                document.getElementById('result-score').innerText = displayScore;
+                
+                if(displayScore < 60) {
+                    title.innerText = "Keep Practicing!";
+                    title.className = "text-4xl md:text-6xl text-red-400 mb-2 font-bold drop-shadow-lg flex-none";
+                    desc.innerText = "You can do it! Try again!";
+                } else {
+                    title.innerText = "Level Complete!";
+                    title.className = "text-4xl md:text-6xl text-yellow-400 mb-2 font-bold drop-shadow-lg flex-none";
+                    desc.innerText = "Great job driving!";
+                }
+                
                 const actions = document.getElementById('result-actions');
                 actions.innerHTML = '';
                 
                 if (isLevel1) {
-                    this.addButton(actions, "Play Again", () => this.startGame(1), 'btn-yellow');
-                    if(finalScore >= 60) this.addButton(actions, "Next Level", () => this.startGame(2), 'btn-green');
+                    this.addButton(actions, "Play Again (L1)", () => this.startGame(1), 'btn-yellow');
+                    this.addButton(actions, "Next Level (L2)", () => this.startGame(2), 'btn-green');
                 } else {
-                    const avg = Math.round(((this.state.l1FinalScore || finalScore) + finalScore) / 2);
-                    document.getElementById('result-score').innerText = avg;
-                    this.addButton(actions, "Play Again (L1 & L2)", () => this.startGame(1), 'btn-yellow');
-                    if(avg >= 60) this.addButton(actions, "Next Topic", () => this.navigate('topic'), 'btn-blue');
-                    this.saveDataAndSend(avg);
+                    this.addButton(actions, "Play Again", () => this.startGame(1), 'btn-yellow');
+                    this.addButton(actions, "Next Topic", () => this.navigate('topic'), 'btn-blue');
+                    this.saveDataAndSend(displayScore);
                 }
             }
 
@@ -575,23 +603,51 @@ right: -15px;
                 fetch("https://script.google.com/macros/s/AKfycbw3AYdsYSRFnSTW4hgSwC9GVePlIHaZKHtWrMk_0gsfBeeAyXWp1yJPkWyEmepZ4uuUvQ/exec", {
                     method: 'POST', mode: 'no-cors', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data)
                 }).catch(console.error);
+                this.renderDashboardTable();
+            }
+            
+            showDashboard() {
+                document.getElementById('dashboard-modal').classList.remove('hidden');
+                this.renderDashboardTable();
             }
 
-            showDashboard() { document.getElementById('dashboard-modal').classList.remove('hidden'); this.renderDashboardTable(); }
-            hideDashboard() { document.getElementById('dashboard-modal').classList.add('hidden'); }
-            renderDashboardTable() {
-                const history = JSON.parse(localStorage.getItem('sr_history') || '[]');
-                const tbody = document.getElementById('dashboard-table-body');
-                tbody.innerHTML = '';
-                history.forEach(r => {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `<td class="p-4">${r.timestamp}</td><td class="p-4 font-bold">${r.studentName}</td><td class="p-4">${r.topic}</td><td class="p-4 font-bold text-green-400">${r.totalScore}</td>`;
-                    tbody.appendChild(tr);
-                });
-                document.getElementById('dashboard-empty').classList.toggle('hidden', history.length > 0);
+            hideDashboard() {
+                document.getElementById('dashboard-modal').classList.add('hidden');
             }
-            toggleFullScreen() { !document.fullscreenElement ? document.documentElement.requestFullscreen() : document.exitFullscreen(); }
+
+            renderDashboardTable() {
+                const body = document.getElementById('dashboard-table-body');
+                const empty = document.getElementById('dashboard-empty');
+                const history = JSON.parse(localStorage.getItem('sr_history') || '[]');
+                body.innerHTML = '';
+                if(history.length === 0) {
+                    empty.classList.remove('hidden');
+                } else {
+                    empty.classList.add('hidden');
+                    history.forEach(r => {
+                        const tr = document.createElement('tr');
+                        tr.className = "border-b border-gray-700";
+                        tr.innerHTML = `<td class="p-3">${r.timestamp}</td><td class="p-3">${r.studentName}</td><td class="p-3">${r.topic}</td><td class="p-3 font-bold text-green-400">${r.totalScore}</td>`;
+                        body.appendChild(tr);
+                    });
+                }
+            }
+
             clearLocalStats() { if(confirm("Clear history?")) { localStorage.removeItem('sr_history'); this.renderDashboardTable(); } }
+
+            toggleFullScreen() {
+                try {
+                    if (!document.fullscreenElement) {
+                        if (document.documentElement.requestFullscreen) {
+                            document.documentElement.requestFullscreen().catch(err => console.warn("Fullscreen permission denied:", err));
+                        }
+                    } else {
+                        if (document.exitFullscreen) {
+                            document.exitFullscreen().catch(err => console.warn("Exit Fullscreen denied:", err));
+                        }
+                    }
+                } catch (err) { console.log("Fullscreen request denied."); }
+            }
         }
 
         const app = new App();
